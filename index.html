@@ -20,6 +20,9 @@
             border: 2px solid black;
             border-radius: 50px;
         }
+        .alertify-notifier .ajs-message.ajs-success{
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -397,9 +400,9 @@
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
         function confirmDelete() {
-            alertify.confirm('Confirm', "Are You Sure to Delete Record ?",
+            alertify.confirm('Confirm', "Are You Sure to Delete Record?",
                 function() {
-                    window.location.href = "login.html";
+                    alertify.success('Record deleted successfully.');
                 },
                 function() {}
             );
